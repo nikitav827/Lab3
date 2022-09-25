@@ -5,11 +5,18 @@ public class AddressBook {
 
 
     public void addBuddy(BuddyInfo buddyInfo){
+
         buddyInfoList.add(buddyInfo);
     }
-    public boolean removeBuddy(BuddyInfo buddyInfo){
-        boolean returnVal = buddyInfoList.remove(buddyInfo);
-        return returnVal;
+//    public boolean removeBuddy(BuddyInfo buddyInfo){
+//        boolean returnVal = buddyInfoList.remove(buddyInfo);
+//        return returnVal;
+//    }
+    public BuddyInfo removeBuddy(int index) {
+        if (index >= 0 && index < buddyInfoList.size()) {
+            return buddyInfoList.remove(index);
+        }
+        return null;
     }
 
     public static void main(String[] args) {
@@ -18,10 +25,10 @@ public class AddressBook {
         BuddyInfo buddyInfo = new BuddyInfo("Bob");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddyInfo);
+        addressBook.removeBuddy(0);
+        System.out.println("ArrayList size:" + addressBook.buddyInfoList.size());
 
-        System.out.println("ArrayList size:" + addressBook.buddyInfoList.size());
-        addressBook.removeBuddy(buddyInfo);
-        System.out.println("ArrayList size:" + addressBook.buddyInfoList.size());
+        // System.out.println("ArrayList size:" + addressBook.buddyInfoList.size());
         }
 
 
