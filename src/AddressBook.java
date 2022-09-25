@@ -26,7 +26,7 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddyInfo);
         addressBook.removeBuddy(0);
-        System.out.println("ArrayList size:" + addressBook.buddyInfoList.size());
+       // System.out.println("ArrayList size:" + addressBook.buddyInfoList.size());
 
         // System.out.println("ArrayList size:" + addressBook.buddyInfoList.size());
         }
