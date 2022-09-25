@@ -8,10 +8,10 @@ public class AddressBook {
 
         buddyInfoList.add(buddyInfo);
     }
-//    public boolean removeBuddy(BuddyInfo buddyInfo){
-//        boolean returnVal = buddyInfoList.remove(buddyInfo);
-//        return returnVal;
-//    }
+    public boolean removeBuddy(BuddyInfo buddyInfo){
+        boolean returnVal = buddyInfoList.remove(buddyInfo);
+        return returnVal;
+    }
     public BuddyInfo removeBuddy(int index) {
         if (index >= 0 && index < buddyInfoList.size()) {
             return buddyInfoList.remove(index);
